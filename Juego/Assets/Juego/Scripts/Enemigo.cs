@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-    private Animator anim;
+    AudioSource fuenteDeAudio;
+    public AudioClip audioGolpe;
 
+    private Animator anim;
+    public GameObject panelDaño;
     //VELOCIDAD MOVIMIENTO
     public float velocidadMovimiento = 5.0f;
     //VELOCIDAD ROTACION
@@ -22,6 +25,7 @@ public class Enemigo : MonoBehaviour
         anim = GetComponent<Animator>();
 		personaje = GameObject.Find("Personaje");
 		rb = GetComponent<Rigidbody>();
+        fuenteDeAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,21 +42,24 @@ public class Enemigo : MonoBehaviour
         //FUNCION PARA QUE SE DESPLAZE
         //transform.Translate(0, 0, y * Time.deltaTime * velocidadMovimiento);
 		//rb.velocity = new Vector3 (velocidadMovimiento, rb.velocity.y, velocidadMovimiento);
-
        
         anim.SetFloat("VelX", x);
-        anim.SetFloat("VelY", y);
-
-		
+        anim.SetFloat("VelY", y);		
     }
 
 	
 		void OnCollisionEnter(Collision col)
     {
-		if(col.gameObject.name == "Personaje"){
-			Debug.Log("sdad");
+		if(col.gameObject.name == "Personaje"){			
 			col.gameObject.SendMessage("RecibirDanio",  5);
-		}
+            panelDaño.SetActive(true);
+            fuenteDeAudio.clip = audioGolpe;
+            fuenteDeAudio.Play();
+        }
+        else
+        {
+            panelDaño.SetActive(false);
+        }
 	}
 	
 

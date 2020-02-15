@@ -5,11 +5,11 @@ using UnityEngine;
 public class DanioCura : MonoBehaviour
 {
     public bool esDanio;
-    public float danio = 10;
+    public float danio = 10;    
 
     private void OnTriggerStay(Collider col)
     {
         if (col.tag == "Player")
-            col.SendMessage((esDanio) ? "RecibirDanio" : "CurarDanio", Time.deltaTime * danio);
+            col.SendMessage((esDanio) ? "RecibirDanio" : "CurarDanio", Time.deltaTime * danio);        
     }
 }

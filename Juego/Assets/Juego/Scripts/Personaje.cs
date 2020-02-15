@@ -16,12 +16,10 @@ public class Personaje : MonoBehaviour
     public float x, y;
 
     //PARA MOVER LA CAMARA CON EL RATON
-    public float h,v;
+    public float h, v;
     public Camera FPSCamera;
     public float horizontalSpeed;
     public float verticalSpeed;
-
-	[SerializeField] private GameObject resistencia;
 
 
     //Inicializo el contador de coleccionables recogidos y los puntos
@@ -29,10 +27,9 @@ public class Personaje : MonoBehaviour
     private int contador;
     private int puntos;
 
-		public bool huir = false;
-	private float tiempo;
+    public bool huir = false;
+    private float tiempo;
 
-    // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -45,18 +42,20 @@ public class Personaje : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
 
-  
 
         //FUNCION PARA ROTAR
         transform.Rotate(0, x * Time.deltaTime * velocidadRotacion, 0);
         //FUNCION PARA QUE SE DESPLAZE
-        transform.Translate(0,0, y * Time.deltaTime * velocidadMovimiento);   
+        transform.Translate(0, 0, y * Time.deltaTime * velocidadMovimiento);
 
-		if(Input.GetKey(KeyCode.LeftShift)){
-		velocidadMovimiento = 8.0f;
-		}else{
-		velocidadMovimiento = 5.0f;
-		}
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            velocidadMovimiento = 8.0f;
+        }
+        else
+        {
+            velocidadMovimiento = 5.0f;
+        }
 
         anim.SetFloat("VelX", x);
         anim.SetFloat("VelY", y);
@@ -66,9 +65,7 @@ public class Personaje : MonoBehaviour
         v = verticalSpeed * Input.GetAxis("Mouse Y");
 
         transform.Rotate(0, h, 0);
-        FPSCamera.transform.Rotate(-v,0,0);
-
-	
+        FPSCamera.transform.Rotate(-v, 0, 0);
 
         //Si los enemigos están huyendo y nos e ha acabado el tiempo, decremento el tiempo
         if (huir && tiempo > 0)
@@ -81,7 +78,7 @@ public class Personaje : MonoBehaviour
         {
             huir = false;
         }
-     
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -96,28 +93,28 @@ public class Personaje : MonoBehaviour
             setTextoPuntos();
         }
 
-		//Cuando tocamos una botella
+        //Cuando tocamos una botella
         if (other.gameObject.CompareTag("Botella"))
         {
-			new WaitForSeconds (2);
-			other.gameObject.SetActive(false);
-			 //Inicio el contador hacia atrás y pongo a true el booleano
+            new WaitForSeconds(2);
+            other.gameObject.SetActive(false);
+            //Inicio el contador hacia atrás y pongo a true el booleano
             tiempo = 10;
             huir = true;
-		}
+        }
 
-		if (other.gameObject.CompareTag("Puniala"))
+        if (other.gameObject.CompareTag("Puniala"))
         {
-			new WaitForSeconds (2);
-			other.gameObject.SetActive(false);
-		}
+            new WaitForSeconds(2);
+            other.gameObject.SetActive(false);
+        }
 
     }
 
     //Actualizo el texto del contador (O muestro el de ganar si las ha cogido todas)
     void setTextoPuntos()
     {
-        TextoPuntuacion.text = "SCORE: "+puntos.ToString();
+        TextoPuntuacion.text = "SCORE: " + puntos.ToString();
     }
 
 

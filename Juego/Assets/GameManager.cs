@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     //Objeto GameManager
     private GameObject gameManager;
-
-	[SerializeField]private GameObject pauseMenuUI;	
-	private bool GameIsPaused = true;
 
     void Start()
     {
@@ -20,28 +18,19 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameManager);
 
         //Cargo la escena de inicio
-        //SceneManager.LoadScene("Menu");
-    }
+        //SceneManager.LoadScene("Menu");    }
 
-	void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape)){
-			if(GameIsPaused){
-				Resume();
-			}else{
-				Pause();
-			}
-		}
     }
-
     public void menuLogin()
     {
         SceneManager.LoadScene("MenuLogin");
     }
+
     public void menu()
     {
         SceneManager.LoadScene("Menu");
     }
+
     public void menuSalir()
     {
         Application.Quit();
@@ -52,27 +41,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("MenuInfo");
     }
 
-	public void abrirRegister(){
-		Application.OpenURL("http://3.8.131.236/GAME/public/index.php/admin");
-	}
+    public void abrirRegister()
+    {
+        Application.OpenURL("http://3.8.131.236/GAME/public/index.php/admin");    }
 
-
-	public void Resume(){
-		pauseMenuUI.SetActive(false);
-		Time.timeScale = 1f;
-		GameIsPaused = false;
-	}
-
-	public void Pause(){
-		pauseMenuUI.SetActive(true);
-		Time.timeScale = 0f;
-		GameIsPaused = true;
-	}
-
-    public void reiniciar()
+    void reiniciar()
     {
         SceneManager.LoadScene("Juego");
     }
-
-
 }
+

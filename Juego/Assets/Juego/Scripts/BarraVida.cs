@@ -8,20 +8,17 @@ public class BarraVida : MonoBehaviour
     public Image VidaActual;
     public Text RatioTexto;
 
-	public Image ResistenciaActual;
-
     private float puntosVida = 150;
     private float putosVidaMaximo = 150;
-	private bool GameIsPaused = true;
+	private bool GameIsPaused = true;   
 
-	[SerializeField]private GameObject gameOverUI;
+    [SerializeField]private GameObject gameOverUI;
 
 
 
     private void Start()
     {
-        ActualizarVida();
-		//ActualizarResistencia();
+        ActualizarVida();		
     }
 
 	private void Update()
@@ -43,9 +40,8 @@ public class BarraVida : MonoBehaviour
 
     public void RecibirDanio(float danio)
     {
-        puntosVida -= danio;
-
-        if(puntosVida < 0)
+        puntosVida -= danio;       
+        if (puntosVida < 0)
         {
             puntosVida = 0;
             gameOverUI.SetActive(true);
@@ -68,11 +64,4 @@ public class BarraVida : MonoBehaviour
         ActualizarVida();
 
     }
-
-/*	 private void ActualizarResistencia()
-    {
-        float ratio = puntosresistencia / putosResistenciaMaximo;
-        VidaActual.rectTransform.localScale = new Vector3(ratio, 1, 1);
-
-    }*/
 }

@@ -71,6 +71,7 @@
     <Compile Include="Assets\Juego\Scripts\EnemyControl.cs" />
     <Compile Include="Assets\Juego\Scripts\NavEnemigo.cs" />
     <Compile Include="Assets\Juego\Scripts\Personaje.cs" />
+    <Compile Include="Assets\Juego\Scripts\PuaseMenu.cs" />
     <Compile Include="Assets\Juego\Scripts\Rotador.cs" />
     <Compile Include="Assets\Juego\Textures\IL3DN\Scripts\IL3DN_ChangeWalkingSound.cs" />
     <Compile Include="Assets\Juego\Textures\IL3DN\Scripts\IL3DN_SimpleFPSController.cs" />
@@ -81,6 +82,9 @@
     <Compile Include="Assets\Juego\Textures\Nubes\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_UIs.cs" />
     <Compile Include="Assets\Juego\Textures\Nubes\GE Common Assets\GE Toggle Full Screen\Scripts\GE_ToggleFullScreenUI.cs" />
     <Compile Include="Assets\Juego\Textures\Nubes\GE Common Assets\Scripts\GE_UIResponder.cs" />
+    <Compile Include="Assets\Menu\Scripts\JsonHelper.cs" />
+    <Compile Include="Assets\Menu\Scripts\Usuario.cs" />
+    <Compile Include="Assets\Menu\Scripts\Usuarionuevo.cs" />
     <None Include="Assets\Juego\Textures\IL3DN\Shaders\IL3DN_Pine.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
