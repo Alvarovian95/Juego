@@ -70,10 +70,7 @@ public class Usuarionuevo : MonoBehaviour
                 string jsonResponse = webRequest.downloadHandler.text;
                // Puntacion[] puntos = JsonHelper.getJsonArray<Puntacion>(jsonResponse);
 
-
-
                 errorUsuario.text = "si";
-
             }
         }
 

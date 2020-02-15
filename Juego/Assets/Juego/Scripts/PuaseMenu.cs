@@ -36,4 +36,9 @@ public class PuaseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
+    public void Salir()
+    {
+        Application.Quit();
+    }
 }
