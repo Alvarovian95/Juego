@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Personaje : MonoBehaviour
 {
     private Animator anim;
+    AudioSource fuenteDeAudio;
+    public AudioClip audioManzana;
 
     //VELOCIDAD MOVIMIENTO
     public float velocidadMovimiento = 5.0f;
@@ -33,6 +35,7 @@ public class Personaje : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        fuenteDeAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -88,6 +91,8 @@ public class Personaje : MonoBehaviour
             other.gameObject.SetActive(false);
             contador = contador + 1;
             puntos = contador * 100;
+            fuenteDeAudio.clip = audioManzana;
+            fuenteDeAudio.Play();
 
             //Actualizo el texto puntos
             setTextoPuntos();

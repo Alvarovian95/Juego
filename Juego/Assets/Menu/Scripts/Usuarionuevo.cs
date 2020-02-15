@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Usuarionuevo : MonoBehaviour
 {
@@ -11,14 +12,18 @@ public class Usuarionuevo : MonoBehaviour
     [SerializeField] private InputField inputUsuario, inputContrasena;
     [SerializeField] private Text errorUsuario, errorContra;
     //private string urlNoticias = "http://157.230.102.160/formacion/ceu/daw-2019-20/cms/public/index.php/unitynoticias";
-    private string urlNoticias = "http://35.180.139.240/DesarrolloWebServidor/ComeCocos/public/index.php/compruebaUsuario";
+    // private string urlNoticias = "http://35.180.139.240/DesarrolloWebServidor/ComeCocos/public/index.php/compruebaUsuario";
+    private string urlNoticias = "http://3.8.131.236/GAME/public/index.php/admin"; //WEB MERCHAN
     private Usuario usuario;
     public float velocidad = 100;
+    private GameObject musicaMenu;
 
     private void Start()
     {
 
         GetComponent<Button>().onClick.AddListener(() => ComprobarUsuario());
+        musicaMenu = GameObject.Find("MusicMenu");
+
 
     }
 
@@ -71,6 +76,8 @@ public class Usuarionuevo : MonoBehaviour
                // Puntacion[] puntos = JsonHelper.getJsonArray<Puntacion>(jsonResponse);
 
                 errorUsuario.text = "si";
+                Destroy(musicaMenu);
+                SceneManager.LoadScene("Juego");
             }
         }
 

@@ -8,14 +8,17 @@ public class GameManager : MonoBehaviour
 {
     //Objeto GameManager
     private GameObject gameManager;
+    private GameObject musicaMenu;
 
     void Start()
     {
         //Busco el objeto llamado GameManager
         gameManager = GameObject.Find("GameManager");
+        musicaMenu = GameObject.Find("MusicMenu");
 
         //Le indico que no se destruya al cargar otra escena 
         DontDestroyOnLoad(gameManager);
+        DontDestroyOnLoad(musicaMenu);
 
         //Cargo la escena de inicio
         //SceneManager.LoadScene("Menu");    }
