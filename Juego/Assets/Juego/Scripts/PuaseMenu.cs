@@ -1,14 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PuaseMenu : MonoBehaviour
-{
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+public class PuaseMenu : MonoBehaviour{
 
     public GameObject pauseMenuUI;
     public static bool GameIsPaused = false;
+    //
 
-    void Update()
+        void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -39,6 +37,7 @@ public class PuaseMenu : MonoBehaviour
 
     public void Salir()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Menu");
+
     }
 }
