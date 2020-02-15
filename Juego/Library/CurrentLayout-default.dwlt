@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 494}
   m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 128
+  controlID: 59
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -383,21 +383,21 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8a770000
-      m_LastClickedID: 30602
-      m_ExpandedIDs: 64d4ffffa0d5ffffa8f3ffff78fbffffa27200008a740000b6770000f0780000
+      scrollPos: {x: 0, y: 865}
+      m_SelectedIDs: 0ee8fcff
+      m_LastClickedID: -202738
+      m_ExpandedIDs: c8fafcff3407fdff760efdffdec80000fac80000fec800002ec90000f2ca0000e4cb000048cd000010ce000020ce000040cf0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Cajas
-        m_OriginalName: Cajas
+        m_Name: Pf_BladeTrap (6)
+        m_OriginalName: Pf_BladeTrap (6)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 30590
+        m_UserData: -201660
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -446,9 +446,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 22.421526, y: 10.494314, z: 48.257423}
+    m_Target: {x: 30.74, y: 4.0392356, z: 20}
     speed: 2
-    m_Value: {x: 22.421526, y: 10.494314, z: 48.257423}
+    m_Value: {x: 30.74, y: 4.0392356, z: 20}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -477,13 +477,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.1814341, y: -0.30412412, z: 0.059119966, w: 0.9333288}
+    m_Target: {x: -0.33293176, y: -0.45652202, z: 0.18925548, w: -0.8030792}
     speed: 2
-    m_Value: {x: 0.18143341, y: -0.30412295, z: 0.05911974, w: 0.93332523}
+    m_Value: {x: -0.33172515, y: -0.45680317, z: 0.18856955, w: -0.8035737}
   m_Size:
-    m_Target: 36.054253
+    m_Target: 8.288439
     speed: 2
-    m_Value: 36.054253
+    m_Value: 7.9315205
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -689,20 +689,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Juego/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 89
   m_LastFolders:
-  - Assets/Juego/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: 89
-  m_LastProjectPath: E:\source\Repos\Juego\Juego
+  m_LastProjectPath: E:\source\Repos\JuegoUnity\Juego\Juego
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 55}
-    m_SelectedIDs: 1c4c0000
-    m_LastClickedID: 19484
-    m_ExpandedIDs: 00000000022e00007a2f0000862f00008e2f00009e2f0000683200004e3f0000524800009a480000b04900000c4a0000824a00001e4b00007a5700007c5700007e57000080570000825700008457000086570000885700008a5700008c5700008e570000905700009257000094570000965700009857000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 8cb50000
+    m_LastClickedID: 46476
+    m_ExpandedIDs: 00000000ceb200009ab30000a4b30000acb30000e6b40000b8b5000016b6000030b60000c4b60000e0b600000ab7000040b70000d0bf0000d2bf0000d4bf0000d6bf0000d8bf0000dabf0000dcbf0000debf0000e0bf0000e2bf0000e4bf0000e6bf0000e8bf0000eabf0000ecbf0000eebf000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -730,7 +730,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000022e00007a2f00008e2f00009e2f0000683200004e3f0000524800009a480000b04900000c4a0000824a00001e4b00007a5700007c5700007e57000080570000825700008457000086570000885700008a5700008c5700008e5700009057000092570000945700009657000098570000
+    m_ExpandedIDs: 00000000ceb200009ab30000a4b30000acb30000e6b40000b8b5000016b6000030b60000c4b60000e0b600000ab7000040b70000d0bf0000d2bf0000d4bf0000d6bf0000d8bf0000dabf0000dcbf0000debf0000e0bf0000e2bf0000e4bf0000e6bf0000e8bf0000eabf0000ecbf0000eebf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -873,4 +873,29 @@ MonoBehaviour:
     y: 73
     width: 409
     height: 928
+  m_ViewDataDictionary: {fileID: 0}
+--- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12059, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEditor:UnityEditor.Experimental.TerrainAPI:PaintTextureTool
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Failed to load
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 320
+    height: 550
   m_ViewDataDictionary: {fileID: 0}
