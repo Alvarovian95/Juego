@@ -38,6 +38,5 @@ public class PuaseMenu : MonoBehaviour{
     public void Salir()
     {
         SceneManager.LoadScene("Menu");
-
     }
 }
